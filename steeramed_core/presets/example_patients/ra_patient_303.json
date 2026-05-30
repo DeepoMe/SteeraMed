@@ -1,0 +1,381 @@
+{
+  "patient_id": "GSM1052147",
+  "age": 51,
+  "sex": "M",
+  "disease": "ra",
+  "meta": {
+    "n_total_compounds": 1482,
+    "n_known_drugs_in_top10": 6,
+    "n_perturbed_modules": 67,
+    "description": "RA Patient #303, 51y Male, GSE42861"
+  },
+  "perturbed_modules": [
+    {
+      "hub_gene": "SH2D1A",
+      "delta": 0.0222,
+      "p_value": 2.81e-12,
+      "n_genes": 134,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "CD8B",
+      "delta": 0.0253,
+      "p_value": 1.14e-11,
+      "n_genes": 95,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "TRAT1",
+      "delta": 0.0167,
+      "p_value": 2.75e-11,
+      "n_genes": 157,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "ITK",
+      "delta": 0.0155,
+      "p_value": 3.19e-9,
+      "n_genes": 194,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "CD6",
+      "delta": 0.0203,
+      "p_value": 1.49e-8,
+      "n_genes": 130,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "CD96",
+      "delta": 0.0224,
+      "p_value": 2.41e-8,
+      "n_genes": 103,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "TRAF3IP3",
+      "delta": 0.0181,
+      "p_value": 3.38e-8,
+      "n_genes": 77,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "UBASH3A",
+      "delta": 0.019,
+      "p_value": 5.38e-8,
+      "n_genes": 78,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "SLAMF6",
+      "delta": 0.0206,
+      "p_value": 7.35e-7,
+      "n_genes": 124,
+      "hallmark": null
+    },
+    {
+      "hub_gene": "PTPRCAP",
+      "delta": 0.028,
+      "p_value": 0.00000112,
+      "n_genes": 43,
+      "hallmark": null
+    }
+  ],
+  "top_compounds": [
+    {
+      "rank": 1,
+      "compound_id": "CIDm00004740",
+      "compound_name": "pentoxifylline",
+      "importance": 3,
+      "mean_abs_sa": 9.49,
+      "is_known_drug": true,
+      "n_targets": 139,
+      "matched_modules": [
+        {
+          "ppi_hub": "OLFM4",
+          "sa": 10.22,
+          "target_genes": [
+            "CTSG",
+            "IL10",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "CEACAM6",
+          "sa": 9.26,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "DEFA4",
+          "sa": 8.97,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO",
+            "PRTN3"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "compound_id": "CIDm00054454",
+      "compound_name": "MLN4924 (Pevonedistat)",
+      "importance": 3,
+      "mean_abs_sa": 9.49,
+      "is_known_drug": false,
+      "n_targets": 285,
+      "matched_modules": [
+        {
+          "ppi_hub": "OLFM4",
+          "sa": 10.22,
+          "target_genes": [
+            "CTSG",
+            "IL10",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "CEACAM6",
+          "sa": 9.26,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "DEFA4",
+          "sa": 8.97,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO",
+            "PRTN3"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "compound_id": "CIDm23690938",
+      "compound_name": "piroxicam",
+      "importance": 3,
+      "mean_abs_sa": 8.98,
+      "is_known_drug": true,
+      "n_targets": 212,
+      "matched_modules": [
+        {
+          "ppi_hub": "CEACAM6",
+          "sa": 9.26,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "DEFA4",
+          "sa": 8.97,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO",
+            "PRTN3"
+          ]
+        },
+        {
+          "ppi_hub": "RNASE3",
+          "sa": 8.72,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "IL10",
+            "MPO",
+            "PRTN3"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "compound_id": "CIDm00002116",
+      "compound_name": "vitamin E",
+      "importance": 2,
+      "mean_abs_sa": 9.12,
+      "is_known_drug": true,
+      "n_targets": 315,
+      "matched_modules": [
+        {
+          "ppi_hub": "CEACAM6",
+          "sa": 9.26,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO"
+          ]
+        },
+        {
+          "ppi_hub": "DEFA4",
+          "sa": 8.97,
+          "target_genes": [
+            "AZU1",
+            "CTSG",
+            "MPO",
+            "PRTN3"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "compound_id": "CIDm00004033",
+      "compound_name": "Sulfasalazine",
+      "importance": 2,
+      "mean_abs_sa": 8.58,
+      "is_known_drug": false,
+      "n_targets": 103,
+      "matched_modules": [
+        {
+          "ppi_hub": "PRTN3",
+          "sa": 8.66,
+          "target_genes": [
+            "ALB",
+            "CASP3",
+            "IFNG"
+          ]
+        },
+        {
+          "ppi_hub": "ELANE",
+          "sa": 8.5,
+          "target_genes": [
+            "ALB",
+            "CASP3",
+            "IFNG"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "compound_id": "CIDs00126941",
+      "compound_name": "methotrexate",
+      "importance": 1,
+      "mean_abs_sa": 12.85,
+      "is_known_drug": true,
+      "n_targets": 254,
+      "matched_modules": [
+        {
+          "ppi_hub": "RASAL3",
+          "sa": 12.85,
+          "target_genes": [
+            "CD2",
+            "CD52",
+            "ITGAL"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "compound_id": "CIDm00004112",
+      "compound_name": "Ivermectin",
+      "importance": 1,
+      "mean_abs_sa": 12.85,
+      "is_known_drug": false,
+      "n_targets": 254,
+      "matched_modules": [
+        {
+          "ppi_hub": "RASAL3",
+          "sa": 12.85,
+          "target_genes": [
+            "CD2",
+            "CD52",
+            "ITGAL"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "compound_id": "CIDs00005865",
+      "compound_name": "prednisone",
+      "importance": 1,
+      "mean_abs_sa": 12.85,
+      "is_known_drug": true,
+      "n_targets": 117,
+      "matched_modules": [
+        {
+          "ppi_hub": "RASAL3",
+          "sa": 12.85,
+          "target_genes": [
+            "CD2",
+            "CD52",
+            "ITGAL"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "compound_id": "CIDm00004900",
+      "compound_name": "Tadalafil",
+      "importance": 1,
+      "mean_abs_sa": 12.85,
+      "is_known_drug": false,
+      "n_targets": 118,
+      "matched_modules": [
+        {
+          "ppi_hub": "RASAL3",
+          "sa": 12.85,
+          "target_genes": [
+            "CD2",
+            "CD52",
+            "ITGAL"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "compound_id": "CIDm00002907",
+      "compound_name": "cyclophosphamide",
+      "importance": 1,
+      "mean_abs_sa": 10.22,
+      "is_known_drug": true,
+      "n_targets": 266,
+      "matched_modules": [
+        {
+          "ppi_hub": "OLFM4",
+          "sa": 10.22,
+          "target_genes": [
+            "CTSG",
+            "IL10",
+            "MPO"
+          ]
+        }
+      ]
+    }
+  ],
+  "bootstrap_stability": {
+    "CIDm00001003": 0.31,
+    "CIDm00001117": 0.275,
+    "CIDm00000232": 0.245,
+    "CIDm00000271": 0.24,
+    "CIDm00000280": 0.215,
+    "CIDm00003121": 0.21,
+    "CIDm00000977": 0.21,
+    "CIDm00000923": 0.205,
+    "CIDm00000175": 0.2,
+    "CIDm00000961": 0.195,
+    "CIDm00000784": 0.19,
+    "CIDm00005538": 0.18,
+    "CIDm00000312": 0.165,
+    "CIDm00000774": 0.155,
+    "imatinib": 0.15
+  }
+}

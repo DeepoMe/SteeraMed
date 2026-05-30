@@ -1,0 +1,30 @@
+{
+  "ra": {
+    "geo": "GSE42861",
+    "n_cases": 354,
+    "n_controls": 335,
+    "tissue": "whole blood",
+    "platform": "Illumina 450K"
+  },
+  "breast_cancer": {
+    "geo": "GSE51032",
+    "n_cases": 235,
+    "n_controls": 424,
+    "tissue": "whole blood",
+    "platform": "Illumina 450K"
+  },
+  "depression": {
+    "geo": "GSE128235",
+    "n_cases": 324,
+    "n_controls": 209,
+    "tissue": "whole blood",
+    "platform": "Illumina 450K"
+  },
+  "aging": {
+    "geo": "GSE40279",
+    "n_young": 109,
+    "n_old": 473,
+    "tissue": "whole blood",
+    "platform": "Illumina 450K"
+  }
+}

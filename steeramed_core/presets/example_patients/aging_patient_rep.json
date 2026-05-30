@@ -1,0 +1,154 @@
+{
+  "patient_id": "REPRESENTATIVE",
+  "age": null,
+  "sex": null,
+  "disease": "aging",
+  "meta": {
+    "dataset": "GSE40279",
+    "n_cases": 473,
+    "n_total_compounds": 1482,
+    "n_perturbed_modules": 100,
+    "n_ppi_pairs": 9156,
+    "young_max": 50,
+    "old_min": 55,
+    "n_geroprotectors_in_pool": 13,
+    "Recall_10": 15.86,
+    "fold_enrichment_vs_random": 1.81,
+    "description": "Aging representative patient, GSE40279 population-level screening (473 old vs young)"
+  },
+  "perturbed_modules": [
+    {"hub_gene": "Chronic Inflammation", "delta": 0.00850, "p_value": 1.0e-15, "n_genes": 35, "hallmark": "Chronic Inflammation"},
+    {"hub_gene": "Epigenetic Alterations", "delta": 0.00741, "p_value": 5.0e-12, "n_genes": 9, "hallmark": "Epigenetic Alterations"},
+    {"hub_gene": "Disabled Autophagy", "delta": 0.00676, "p_value": 2.0e-10, "n_genes": 10, "hallmark": "Disabled Autophagy"},
+    {"hub_gene": "Stem Cell Exhaustion", "delta": 0.00658, "p_value": 8.0e-09, "n_genes": 9, "hallmark": "Stem Cell Exhaustion"},
+    {"hub_gene": "Loss of Proteostasis", "delta": 0.00645, "p_value": 3.5e-08, "n_genes": 11, "hallmark": "Loss of Proteostasis"},
+    {"hub_gene": "Genomic Instability", "delta": 0.00644, "p_value": 1.2e-07, "n_genes": 8, "hallmark": "Genomic Instability"},
+    {"hub_gene": "Mitochondrial Dysfunction", "delta": 0.00598, "p_value": 5.1e-05, "n_genes": 8, "hallmark": "Mitochondrial Dysfunction"}
+  ],
+  "top_compounds": [
+    {
+      "rank": 1,
+      "compound_id": "CIDm00000937",
+      "compound_name": "Niacin",
+      "importance": 144,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 269,
+      "matched_modules": []
+    },
+    {
+      "rank": 2,
+      "compound_id": "CIDm00002833",
+      "compound_name": "Colchicine",
+      "importance": 137,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 335,
+      "matched_modules": []
+    },
+    {
+      "rank": 3,
+      "compound_id": "CIDm00004737",
+      "compound_name": "Pentobarbital",
+      "importance": 118,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 133,
+      "matched_modules": []
+    },
+    {
+      "rank": 4,
+      "compound_id": "CIDm00003386",
+      "compound_name": "Fluoxetine",
+      "importance": 105,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 223,
+      "matched_modules": []
+    },
+    {
+      "rank": 5,
+      "compound_id": "CIDm00004428",
+      "compound_name": "Naltrexone",
+      "importance": 102,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 187,
+      "matched_modules": []
+    },
+    {
+      "rank": 6,
+      "compound_id": "CIDm00000977",
+      "compound_name": "Oxygen",
+      "importance": 97,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 412,
+      "matched_modules": []
+    },
+    {
+      "rank": 7,
+      "compound_id": "CIDm00045469",
+      "compound_name": "Sodium Nitroprusside",
+      "importance": 96,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 156,
+      "matched_modules": []
+    },
+    {
+      "rank": 8,
+      "compound_id": "CIDm00000784",
+      "compound_name": "Cyanocobalamin",
+      "importance": 96,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 98,
+      "matched_modules": []
+    },
+    {
+      "rank": 9,
+      "compound_id": "CIDm00016850",
+      "compound_name": "Captopril",
+      "importance": 94,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 178,
+      "matched_modules": []
+    },
+    {
+      "rank": 10,
+      "compound_id": "CIDm00040632",
+      "compound_name": "Verapamil",
+      "importance": 93,
+      "mean_abs_sa": 0.0,
+      "is_known_drug": false,
+      "n_targets": 245,
+      "matched_modules": []
+    }
+  ],
+  "mechanism_map": {
+    "CIDm00000937": {
+      "ppi_hubs": ["Chronic Inflammation", "Epigenetic Alterations", "Disabled Autophagy"],
+      "target_genes": ["PARP1", "SIRT1", "NAMPT"],
+      "hallmarks": ["Chronic Inflammation", "Epigenetic Alterations"]
+    },
+    "CIDm00002833": {
+      "ppi_hubs": ["Chronic Inflammation", "Stem Cell Exhaustion", "Loss of Proteostasis"],
+      "target_genes": ["TUBB", "TUBA1A", "CASR"],
+      "hallmarks": ["Chronic Inflammation", "Stem Cell Exhaustion"]
+    }
+  },
+  "bootstrap_stability": {
+    "Niacin": 30.4,
+    "Colchicine": 29.0,
+    "Pentobarbital": 24.9,
+    "Fluoxetine": 22.2,
+    "Naltrexone": 21.6,
+    "Oxygen": 20.5,
+    "Sodium Nitroprusside": 20.3,
+    "Cyanocobalamin": 20.3,
+    "Captopril": 19.9,
+    "Verapamil": 19.7
+  }
+}

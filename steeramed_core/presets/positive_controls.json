@@ -1,0 +1,48 @@
+{
+  "ra": [
+    {"name": "Methotrexate", "cid": "CIDs00126941", "type": "DMARD"},
+    {"name": "Prednisone", "cid": "CIDs00005865", "type": "corticosteroid"},
+    {"name": "Pentoxifylline", "cid": "CIDm00004740", "type": "phosphodiesterase_inhibitor"},
+    {"name": "Piroxicam", "cid": "CIDm23690938", "type": "NSAID"},
+    {"name": "Cyclophosphamide", "cid": "CIDm00002907", "type": "alkylating_DMARD"},
+    {"name": "Vitamin E", "cid": "CIDm00002116", "type": "antioxidant"}
+  ],
+  "breast_cancer": [
+    {"name": "Paclitaxel", "cid": "CIDm00363148", "type": "chemotherapy"},
+    {"name": "Tamoxifen", "cid": "CIDm000027301", "type": "hormonal_therapy"},
+    {"name": "Doxorubicin", "cid": "CIDm000031703", "type": "chemotherapy"},
+    {"name": "Cyclophosphamide", "cid": "CIDm00002907", "type": "chemotherapy"}
+  ],
+  "depression": [
+    {"name": "Creatine", "cid": "CIDm00000586", "type": "nutraceutical"},
+    {"name": "Inositol", "cid": "CIDm00000806", "type": "nutraceutical"},
+    {"name": "Fluoxetine", "cid": "CIDm00003386", "type": "SSRI"},
+    {"name": "Sertraline", "cid": "CIDm00005291", "type": "SSRI"},
+    {"name": "Trimipramine", "cid": "CIDm00005538", "type": "TCA"},
+    {"name": "Zinc", "cid": "CIDm00002394", "type": "nutraceutical"},
+    {"name": "Selenium", "cid": "CIDm00006330", "type": "nutraceutical"},
+    {"name": "Folic Acid", "cid": "CIDm00001693", "type": "nutraceutical"}
+  ],
+  "aging": [
+    {"name": "Metformin", "cid": "CIDm00000879", "type": "geroprotector"},
+    {"name": "Rapamycin", "cid": "CIDs00000094", "type": "geroprotector"},
+    {"name": "DHEA", "cid": "CIDm00000271", "type": "geroprotector"},
+    {"name": "Chloroquine", "cid": "CIDm00000305", "type": "geroprotector"},
+    {"name": "Melatonin", "cid": "CIDm00000678", "type": "geroprotector"},
+    {"name": "Spermidine", "cid": "CIDm00002513", "type": "geroprotector"},
+    {"name": "Lithium Carbonate", "cid": "CIDm00000945", "type": "geroprotector"},
+    {"name": "Methylene Blue", "cid": "CIDm00000683", "type": "geroprotector"},
+    {"name": "Resveratrol", "cid": "CIDs04443532", "type": "geroprotector"},
+    {"name": "NAD+", "cid": "CIDs00000352", "type": "geroprotector"},
+    {"name": "Acarbose", "cid": "CIDs00001861", "type": "geroprotector"},
+    {"name": "Aspirin", "cid": "CIDm00000346", "type": "geroprotector"},
+    {"name": "Folic Acid", "cid": "CIDm00001693", "type": "geroprotector"},
+    {"name": "Vitamin D3", "cid": "CIDm00001596", "type": "geroprotector"},
+    {"name": "Estradiol", "cid": "CIDm00006530", "type": "geroprotector"},
+    {"name": "Pioglitazone", "cid": "CIDm00001400", "type": "geroprotector"},
+    {"name": "Nicotinamide", "cid": "CIDm00002364", "type": "geroprotector"},
+    {"name": "Hydroxychloroquine", "cid": "CIDm00003652", "type": "geroprotector"},
+    {"name": "Azathioprine", "cid": "CIDm00002266", "type": "geroprotector"},
+    {"name": "Vitamin E", "cid": "CIDm00002116", "type": "geroprotector"}
+  ]
+}
