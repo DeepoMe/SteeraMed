@@ -107,7 +107,7 @@ print(f"Steerability Alignment score: {sa:.3f}")
 
 ## 🏗️ 工作原理
 
-SteeraMed 推理**哪些化合物能够将个体患者的分子状态引导回健康方向**，仅需 DNA 甲基化数据与公共数据库（STRING PPI + STITCH 化合物靶点）。
+SteeraMed 推理**哪些化合物能够将个体患者的分子状态引导回健康方向**，仅需 DNA 甲基化数据与公共数据库（PPI 网络 + 化合物靶点互作）。
 
 ### 四层证据链
 
@@ -210,4 +210,15 @@ steeramed_core/
 
 ## 许可证
 
-MIT 许可证。详见 [LICENSE](LICENSE)。
+MIT 许可证。仅适用于本仓库的**代码**。
+
+`steeramed_core/presets/` 中的**预计算数据文件**包含 STITCH (CC BY-NC) 的衍生结果，仅供**学术研究和教育用途**。商业用途需获得 [EMBL 授权](mailto:stitch@embl.de)。
+
+### 数据来源与致谢
+
+- **PPI 网络**: STRING v12.5 — CC BY 4.0
+- **化合物-靶点互作**: STITCH — CC BY-NC（仅学术用途）
+- **甲基化数据**: GEO (NCBI) — 公共领域
+- **Hallmark 基因集**: MSigDB — CC BY 4.0
+
+> 本仓库分发的是**预计算分析结果**（排名化合物列表、PPI 模块摘要），而非原始 STRING 或 STITCH 数据库。

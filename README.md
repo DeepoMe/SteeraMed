@@ -112,12 +112,16 @@ fig = plot_patient_card(data)
 fig.savefig("my_patient_card.png", dpi=300)
 ```
 
-## Data Sources
+## Data Sources & Acknowledgments
 
-- **PPI Network**: STRING v12.0 (CC BY 4.0)
-- **Compound Targets**: STITCH (CC BY-NC, academic use only)
-- **Methylation Data**: GEO (public domain)
-- **Hallmark Gene Sets**: MSigDB (CC BY 4.0)
+This package includes pre-computed results derived from the following open databases. We gratefully acknowledge the original data providers:
+
+- **PPI Network**: STRING v12.5 — Szklarczyk et al., *Nucleic Acids Res* 53(D1), 2025. [CC BY 4.0](https://string-db.org/cgi/access?footer_active_subpage=licensing)
+- **Compound–Target Interactions**: STITCH — Kuhn et al., *Nucleic Acids Res* 36(Database), 2008. [CC BY-NC](http://stitch-db.org) — **this package uses STITCH-derived data for academic research only; commercial applications require [separate authorization from EMBL](mailto:stitch@embl.de)**
+- **Methylation Data**: GEO (NCBI) — public domain
+- **Hallmark Gene Sets**: MSigDB — Liberzon et al., *PNAS* 112(25), 2015. [CC BY 4.0](https://www.gsea-msigdb.org/gsea/msigdb_license.jsp)
+
+> **Note**: This repository distributes **pre-computed analytical results** (e.g., ranked compound lists, PPI module summaries), not the original STRING or STITCH databases. Users who wish to access or redistribute the underlying databases must comply with their respective license terms.
 
 ## Citation
 
@@ -139,4 +143,6 @@ This software generates hypothesis-generating insights only. It is not a medical
 
 ## License
 
-MIT License. Note: STITCH compound-target data is CC BY-NC; commercial use requires separate licensing.
+MIT License. This applies to the **code** in this repository only.
+
+The **pre-computed data files** (JSON files in `steeramed_core/presets/`) incorporate derivative results from STITCH (CC BY-NC). These data files are provided for **academic research and educational purposes only**. Commercial use of STITCH-derived data requires [authorization from EMBL](mailto:stitch@embl.de).
