@@ -3,84 +3,92 @@
   "age": 52,
   "sex": "M",
   "disease": "depression",
-  "meta": {
-    "subcohort": "mid_age_36_55",
-    "n_perturbed_modules": 100,
-    "n_semo_features": 18937,
-    "description": "Depression Patient #61, 52y Male, GSE128235 (mid-age 36-55 subcohort)",
-    "n_total_compounds": 1482,
-    "n_known_drugs_in_top10": 3
-  },
+  "geo_id": "GSE128235",
+  "index": 61,
   "perturbed_modules": [
     {
       "hub_gene": "MPO",
-      "delta": -0.0291,
-      "p_value": 2.87e-14,
+      "delta": -0.029145192354917526,
+      "p_value": 2.866090944558615e-14,
       "n_genes": 276,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "CAMP",
-      "delta": -0.0335,
-      "p_value": 3.08e-10,
+      "delta": -0.03346158564090729,
+      "p_value": 3.083857450259075e-10,
       "n_genes": 143,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "TREM1",
-      "delta": -0.0329,
-      "p_value": 5.66e-10,
+      "delta": -0.03293225169181824,
+      "p_value": 5.65861502014054e-10,
       "n_genes": 108,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "S100A12",
-      "delta": -0.028,
-      "p_value": 1.13e-9,
+      "delta": -0.028004970401525497,
+      "p_value": 1.127008042989889e-9,
       "n_genes": 150,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "ELANE",
-      "delta": -0.0257,
-      "p_value": 3.87e-9,
+      "delta": -0.02567340061068535,
+      "p_value": 3.865073603282589e-9,
       "n_genes": 181,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "CTSG",
-      "delta": -0.0297,
-      "p_value": 5.02e-9,
+      "delta": -0.029723988845944405,
+      "p_value": 5.019889113348177e-9,
       "n_genes": 155,
-      "hallmark": null
+      "hallmark": "Loss of Proteostasis"
     },
     {
       "hub_gene": "LCN2",
-      "delta": -0.021,
-      "p_value": 3.42e-8,
+      "delta": -0.020972013473510742,
+      "p_value": 3.4216479453936634e-8,
       "n_genes": 206,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "MMP8",
-      "delta": -0.0327,
-      "p_value": 1.68e-7,
+      "delta": -0.03266012668609619,
+      "p_value": 1.6835768133560643e-7,
       "n_genes": 99,
-      "hallmark": null
+      "hallmark": "Loss of Proteostasis"
     },
     {
       "hub_gene": "S100A9",
-      "delta": -0.0273,
-      "p_value": 2.27e-7,
+      "delta": -0.027250239625573158,
+      "p_value": 2.271565269696224e-7,
       "n_genes": 128,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "RETN",
-      "delta": -0.021,
-      "p_value": 2.35e-7,
+      "delta": -0.02102629467844963,
+      "p_value": 2.3483542007507217e-7,
       "n_genes": 155,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
+    },
+    {
+      "hub_gene": "CLEC7A",
+      "delta": -0.019821608439087868,
+      "p_value": 2.632736014896752e-7,
+      "n_genes": 189,
+      "hallmark": "Epigenetic Alterations"
+    },
+    {
+      "hub_gene": "DEFA4",
+      "delta": -0.05256253853440285,
+      "p_value": 7.616292777385159e-7,
+      "n_genes": 49,
+      "hallmark": "Chronic Inflammation"
     }
   ],
   "top_compounds": [
@@ -89,36 +97,42 @@
       "compound_id": "CIDm00000586",
       "compound_name": "creatine",
       "importance": 5,
-      "mean_abs_sa": 9.58,
+      "mean_abs_sa": 9.58618958791097,
       "is_known_drug": true,
       "n_targets": 146,
       "matched_modules": [
         {
           "ppi_hub": "FCN1",
-          "sa": 11.18,
-          "target_genes": [
+          "sa_score": -11.180612564086914,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "CAMP",
-          "sa": 8.83,
-          "target_genes": [
+          "sa_score": -8.82918643951416,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "SFTPD",
-          "sa": 8.75,
-          "target_genes": [
+          "sa_score": -8.748769760131836,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Mitochondrial Dysfunction"
         }
       ]
     },
@@ -127,36 +141,42 @@
       "compound_id": "CIDm00002631",
       "compound_name": "CIDm00002631",
       "importance": 5,
-      "mean_abs_sa": 7.54,
+      "mean_abs_sa": 7.20937458674113,
       "is_known_drug": false,
       "n_targets": 60,
       "matched_modules": [
         {
           "ppi_hub": "LCN2",
-          "sa": 8,
-          "target_genes": [
+          "sa_score": -7.9995951652526855,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "ELANE",
-          "sa": 7.12,
-          "target_genes": [
+          "sa_score": -7.1187920570373535,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "PRTN3",
-          "sa": 6.51,
-          "target_genes": [
+          "sa_score": -6.50973653793335,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -165,36 +185,42 @@
       "compound_id": "CIDm00000085",
       "compound_name": "CIDm00000085",
       "importance": 3,
-      "mean_abs_sa": 10.51,
+      "mean_abs_sa": 10.510017395019531,
       "is_known_drug": false,
       "n_targets": 86,
       "matched_modules": [
         {
           "ppi_hub": "ELANE",
-          "sa": 11.6,
-          "target_genes": [
+          "sa_score": -11.600669860839844,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "FCN1",
-          "sa": 11.18,
-          "target_genes": [
+          "sa_score": -11.180612564086914,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "SFTPD",
-          "sa": 8.75,
-          "target_genes": [
+          "sa_score": -8.748769760131836,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Mitochondrial Dysfunction"
         }
       ]
     },
@@ -203,14 +229,15 @@
       "compound_id": "CIDm00002958",
       "compound_name": "CIDm00002958",
       "importance": 3,
-      "mean_abs_sa": 7.87,
+      "mean_abs_sa": 7.200908025105794,
       "is_known_drug": false,
       "n_targets": 99,
       "matched_modules": [
         {
           "ppi_hub": "CTSG",
-          "sa": 8.12,
-          "target_genes": [
+          "sa_score": 8.117063522338867,
+          "n_targets": 7,
+          "targets": [
             "CSF3",
             "CXCL12",
             "CXCR4",
@@ -218,23 +245,27 @@
             "IL1B",
             "MMP2",
             "RARA"
-          ]
+          ],
+          "hallmark": "Loss of Proteostasis"
         },
         {
           "ppi_hub": "CAMP",
-          "sa": 6.88,
-          "target_genes": [
+          "sa_score": 6.880966663360596,
+          "n_targets": 5,
+          "targets": [
             "CSF3",
             "CXCR4",
             "ERBB2",
             "IL1B",
             "NFKB1"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "ELANE",
-          "sa": 6.6,
-          "target_genes": [
+          "sa_score": 6.60469388961792,
+          "n_targets": 10,
+          "targets": [
             "CASP3",
             "CD34",
             "CSF3",
@@ -243,7 +274,8 @@
             "F3",
             "IL1B",
             "MMP2"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -252,28 +284,32 @@
       "compound_id": "CIDm00001046",
       "compound_name": "CIDm00001046",
       "importance": 2,
-      "mean_abs_sa": 8.7,
+      "mean_abs_sa": 8.703716516494751,
       "is_known_drug": false,
       "n_targets": 60,
       "matched_modules": [
         {
           "ppi_hub": "FCN1",
-          "sa": 11.18,
-          "target_genes": [
+          "sa_score": -11.180612564086914,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "CRP",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "PRG2",
-          "sa": 6.23,
-          "target_genes": [
+          "sa_score": -6.226820468902588,
+          "n_targets": 4,
+          "targets": [
             "ALB",
             "CRP",
             "EPX",
             "MPO"
-          ]
+          ],
+          "hallmark": "Loss of Proteostasis"
         }
       ]
     },
@@ -282,14 +318,15 @@
       "compound_id": "CIDm00000727",
       "compound_name": "CIDm00000727",
       "importance": 2,
-      "mean_abs_sa": 8.92,
+      "mean_abs_sa": 8.916638135910034,
       "is_known_drug": false,
       "n_targets": 68,
       "matched_modules": [
         {
           "ppi_hub": "MPO",
-          "sa": 9.98,
-          "target_genes": [
+          "sa_score": 9.978288650512695,
+          "n_targets": 8,
+          "targets": [
             "APOB",
             "BDNF",
             "ERBB2",
@@ -298,16 +335,19 @@
             "JUN",
             "MAPK3",
             "RARA"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "S100A12",
-          "sa": 7.85,
-          "target_genes": [
+          "sa_score": 7.854987621307373,
+          "n_targets": 3,
+          "targets": [
             "JUN",
             "MAPK1",
             "MAPK3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -316,28 +356,32 @@
       "compound_id": "CIDm00000815",
       "compound_name": "CIDm00000815",
       "importance": 2,
-      "mean_abs_sa": 8.55,
+      "mean_abs_sa": 8.547570705413818,
       "is_known_drug": false,
       "n_targets": 91,
       "matched_modules": [
         {
           "ppi_hub": "SERPINB2",
-          "sa": 9.44,
-          "target_genes": [
+          "sa_score": -9.444499969482422,
+          "n_targets": 3,
+          "targets": [
             "ALB",
             "IL10",
             "TFPI"
-          ]
+          ],
+          "hallmark": "Epigenetic Alterations"
         },
         {
           "ppi_hub": "TFPI",
-          "sa": 7.65,
-          "target_genes": [
+          "sa_score": -7.650641441345215,
+          "n_targets": 4,
+          "targets": [
             "ADCY10",
             "ALB",
             "LGALS4",
             "TFPI"
-          ]
+          ],
+          "hallmark": "Epigenetic Alterations"
         }
       ]
     },
@@ -346,27 +390,31 @@
       "compound_id": "CIDm06918670",
       "compound_name": "CIDm06918670",
       "importance": 2,
-      "mean_abs_sa": 8.12,
+      "mean_abs_sa": 8.12056827545166,
       "is_known_drug": false,
       "n_targets": 91,
       "matched_modules": [
         {
           "ppi_hub": "CTSG",
-          "sa": 8.13,
-          "target_genes": [
+          "sa_score": 8.130025863647461,
+          "n_targets": 3,
+          "targets": [
             "F2R",
             "FGG",
             "TNF"
-          ]
+          ],
+          "hallmark": "Loss of Proteostasis"
         },
         {
           "ppi_hub": "S100A9",
-          "sa": 8.11,
-          "target_genes": [
+          "sa_score": 8.11111068725586,
+          "n_targets": 3,
+          "targets": [
             "FGG",
             "RAC2",
             "TNF"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -375,27 +423,31 @@
       "compound_id": "CIDm00000806",
       "compound_name": "inositol",
       "importance": 2,
-      "mean_abs_sa": 7.25,
+      "mean_abs_sa": 7.2455620765686035,
       "is_known_drug": true,
       "n_targets": 301,
       "matched_modules": [
         {
           "ppi_hub": "S100A12",
-          "sa": 8.1,
-          "target_genes": [
+          "sa_score": 8.101486206054688,
+          "n_targets": 3,
+          "targets": [
             "JUN",
             "MAPK1",
             "PI3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "PRAM1",
-          "sa": 6.39,
-          "target_genes": [
+          "sa_score": 6.3896379470825195,
+          "n_targets": 3,
+          "targets": [
             "LCP2",
             "LYN",
             "VAV1"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -404,37 +456,199 @@
       "compound_id": "CIDm00216239",
       "compound_name": "CIDm00216239",
       "importance": 1,
-      "mean_abs_sa": 11.61,
+      "mean_abs_sa": 11.611559867858887,
       "is_known_drug": false,
       "n_targets": 237,
       "matched_modules": [
         {
           "ppi_hub": "CTSG",
-          "sa": 11.61,
-          "target_genes": [
+          "sa_score": 11.611559867858887,
+          "n_targets": 3,
+          "targets": [
             "CSF3",
             "CXCL12",
             "CXCR4"
-          ]
+          ],
+          "hallmark": "Loss of Proteostasis"
         }
       ]
     }
   ],
   "bootstrap_stability": {
-    "CIDm25880664": 0.245,
-    "trimipramine": 0.205,
-    "CIDm25880656": 0.195,
-    "CIDm00005538": 0.195,
-    "CIDm00006049": 0.185,
-    "zinc": 0.175,
-    "selenium": 0.17,
-    "CIDm00005291": 0.165,
-    "CIDm00005297": 0.155,
-    "CIDm00005408": 0.15,
-    "CIDm00005376": 0.145,
-    "CIDm00036523": 0.135,
-    "CIDm00145068": 0.13,
-    "CIDm00023982": 0.125,
-    "CIDm00006503": 0.125
+    "CIDm25880664": 24.5,
+    "trimipramine": 20.5,
+    "CIDm25880656": 19.5,
+    "CIDm00005538": 19.5,
+    "CIDm00006049": 18.5,
+    "zinc": 17.5,
+    "selenium": 17,
+    "CIDm00005291": 16.5,
+    "CIDm00005297": 15.5,
+    "CIDm00005408": 15,
+    "CIDm00005376": 14.5,
+    "CIDm00036523": 13.5,
+    "CIDm00145068": 13,
+    "CIDm00023982": 12.5,
+    "CIDm00006503": 12.5
+  },
+  "mechanism_map": {
+    "CIDm00000586": {
+      "ppi_hubs": [
+        "FCN1",
+        "CAMP",
+        "SFTPD"
+      ],
+      "target_genes": [
+        "ALB",
+        "CRP",
+        "MPO"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Mitochondrial Dysfunction"
+      ]
+    },
+    "CIDm00002631": {
+      "ppi_hubs": [
+        "LCN2",
+        "ELANE",
+        "PRTN3"
+      ],
+      "target_genes": [
+        "ALB",
+        "CRP",
+        "PRTN3"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00000085": {
+      "ppi_hubs": [
+        "ELANE",
+        "FCN1",
+        "SFTPD"
+      ],
+      "target_genes": [
+        "ALB",
+        "CRP",
+        "MPO"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Mitochondrial Dysfunction"
+      ]
+    },
+    "CIDm00002958": {
+      "ppi_hubs": [
+        "CTSG",
+        "CAMP",
+        "ELANE"
+      ],
+      "target_genes": [
+        "CSF3",
+        "CXCL12",
+        "CXCR4",
+        "F3",
+        "IL1B"
+      ],
+      "hallmarks": [
+        "Loss of Proteostasis",
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00001046": {
+      "ppi_hubs": [
+        "FCN1",
+        "PRG2"
+      ],
+      "target_genes": [
+        "ALB",
+        "CRP",
+        "MPO",
+        "EPX"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Loss of Proteostasis"
+      ]
+    },
+    "CIDm00000727": {
+      "ppi_hubs": [
+        "MPO",
+        "S100A12"
+      ],
+      "target_genes": [
+        "APOB",
+        "BDNF",
+        "ERBB2",
+        "FOS",
+        "GPT2"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00000815": {
+      "ppi_hubs": [
+        "SERPINB2",
+        "TFPI"
+      ],
+      "target_genes": [
+        "ALB",
+        "IL10",
+        "TFPI",
+        "ADCY10",
+        "LGALS4"
+      ],
+      "hallmarks": [
+        "Epigenetic Alterations"
+      ]
+    },
+    "CIDm06918670": {
+      "ppi_hubs": [
+        "CTSG",
+        "S100A9"
+      ],
+      "target_genes": [
+        "F2R",
+        "FGG",
+        "TNF",
+        "RAC2"
+      ],
+      "hallmarks": [
+        "Loss of Proteostasis",
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00000806": {
+      "ppi_hubs": [
+        "S100A12",
+        "PRAM1"
+      ],
+      "target_genes": [
+        "JUN",
+        "MAPK1",
+        "PI3",
+        "LCP2",
+        "LYN"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00216239": {
+      "ppi_hubs": [
+        "CTSG"
+      ],
+      "target_genes": [
+        "CSF3",
+        "CXCL12",
+        "CXCR4"
+      ],
+      "hallmarks": [
+        "Loss of Proteostasis"
+      ]
+    }
   }
 }

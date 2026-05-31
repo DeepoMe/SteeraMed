@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aging_rep",
+    "file": "aging_patient_rep.json",
+    "display": "Aging · Population Screening",
+    "emoji": "\ud83e\uddd3",
+    "tags": ["aging", "population", "hallmarks"],
+    "summary": "7 aging hallmarks \u00b7 Niacin #1 \u00b7 Colchicine #2 \u00b7 2/5 geroprotectors",
+    "evidence": "MODERATE",
+    "disease": "aging"
+  },
+  {
+    "id": "ra_303",
+    "file": "ra_patient_303.json",
+    "display": "RA \u00b7 51M \u00b7 T-cell Perturbation",
+    "emoji": "\ud83e\uddd1",
+    "tags": ["rheumatoid_arthritis", "male", "t-cell", "high_recovery"],
+    "summary": "pentoxifylline #1 \u00b7 6/10 known RA drugs \u00b7 Bootstrap 15%",
+    "evidence": "STRONG",
+    "disease": "ra"
+  },
+  {
+    "id": "dep_61",
+    "file": "dep_patient_61.json",
+    "display": "Depression \u00b7 52M \u00b7 Innate Immunity",
+    "emoji": "\ud83e\uddd1",
+    "tags": ["depression", "male", "innate_immunity"],
+    "summary": "creatine #1 \u00b7 inositol #9 \u00b7 Bootstrap 24.5%",
+    "evidence": "EXPLORATORY",
+    "disease": "depression"
+  }
+]

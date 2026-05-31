@@ -1,79 +1,120 @@
-"""
-CLI entry point: python -m steeramed_core
+"""SteeraMed Core CLI — N-of-1 Evidence Chain Explorer."""
 
-Usage:
-    python -m steeramed_core reproduce [--fig aging|ra|dep|all]
-    python -m steeramed_core info
-"""
 import sys
+import json
 from pathlib import Path
+
+_PRESETS_DIR = Path(__file__).parent / "presets"
+_RESULTS_DIR = Path.cwd() / "results"
+
+_FIGURE_DEFS = [
+    ("hallmark_bar", "plot_hallmark_bar", "Hallmark perturbation profile", "\U0001f4ca"),
+    ("drug_ranking", "plot_drug_ranking", "Top-10 compound ranking", "\U0001f48a"),
+    ("evidence_network", "plot_evidence_network", "Drug-PPI-Hallmark alignment", "\U0001f517"),
+    ("patient_card", "plot_patient_card", "One-page patient summary", "\U0001f4cb"),
+]
+
+
+def _load_catalog():
+    with open(_PRESETS_DIR / "catalog.json", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _print_banner(version):
+    print()
+    print("\U0001f9ec SteeraMed Core \u2014 N-of-1 Evidence Chain Explorer")
+    print("\u2550" * 51)
+    print()
+
+
+def _print_catalog(catalog):
+    print("Select a patient case:")
+    print()
+    for i, c in enumerate(catalog, 1):
+        print(f"  [{i}] {c['emoji']} {c['display']}")
+        print(f"      {c['summary']} \u00b7 {c['evidence']}")
+        print()
+    print(f"Enter choice [1-{len(catalog)}]: ", end="", flush=True)
+
+
+def _generate_case(entry):
+    import matplotlib.pyplot as plt
+
+    case_id = entry["id"]
+    json_path = _PRESETS_DIR / "example_patients" / entry["file"]
+
+    print(f"\nLoading {entry['emoji']} {entry['display']}...\n")
+
+    with open(json_path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    _RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    generated = []
+    for suffix, func_name, desc, icon in _FIGURE_DEFS:
+        mod = __import__(f"steeramed_core.viz.{suffix}", fromlist=[func_name])
+        func = getattr(mod, func_name)
+        fig = func(data)
+        out_path = _RESULTS_DIR / f"{case_id}_{suffix}.png"
+        fig.savefig(str(out_path), dpi=300, bbox_inches="tight", pad_inches=0.05)
+        plt.close(fig)
+        generated.append((f"{case_id}_{suffix}.png", desc, icon))
+
+    print(f"\u2705 Generated 4 figures in results/:")
+    for fname, desc, icon in generated:
+        print(f"  {icon} {fname:40s} \u2014 {desc}")
 
 
 def main():
     args = sys.argv[1:]
+    catalog = _load_catalog()
 
-    if not args or args[0] == "info":
-        _print_info()
+    if "--list" in args:
+        for c in catalog:
+            print(f"  {c['id']:12s}  {c['emoji']} {c['display']}")
         return
 
-    if args[0] == "reproduce":
-        fig = "all"
-        if "--fig" in args:
-            idx = args.index("--fig")
-            if idx + 1 < len(args):
-                fig = args[idx + 1]
-        _reproduce(fig)
+    if "--all" in args:
+        for entry in catalog:
+            _generate_case(entry)
+            print()
         return
 
-    print(f"Unknown command: {args[0]}")
-    print("Usage: python -m steeramed_core [reproduce [--fig aging|ra|dep|all] | info]")
-    sys.exit(1)
+    if "--case" in args:
+        idx = args.index("--case")
+        if idx + 1 >= len(args):
+            print("Error: --case requires an ID argument")
+            sys.exit(1)
+        case_id = args[idx + 1]
+        entry = next((c for c in catalog if c["id"] == case_id), None)
+        if entry is None:
+            print(f"Error: case '{case_id}' not found in catalog")
+            sys.exit(1)
+        _generate_case(entry)
+        return
 
-
-def _print_info():
     from steeramed_core import __version__
-    print(f"steeramed-core v{__version__}")
-    print()
-    print("Available example patients:")
-    patients_dir = Path(__file__).parent / "presets" / "example_patients"
-    for p in sorted(patients_dir.glob("*.json")):
-        size_kb = p.stat().st_size / 1024
-        print(f"  {p.stem} ({size_kb:.0f} KB)")
-    print()
-    print("Commands:")
-    print("  reproduce --fig aging   Generate Fig 4 + Fig S1 (Aging)")
-    print("  reproduce --fig ra      Generate Fig 6 + Fig 7 (RA)")
-    print("  reproduce --fig dep     Generate Fig 8 + Fig S2 (Depression)")
-    print("  reproduce --fig all     Generate all figures")
-    print("  info                    Show this info")
 
+    _print_banner(__version__)
+    _print_catalog(catalog)
 
-def _reproduce(fig):
-    if fig in ("aging", "all"):
-        from steeramed_core.examples.reproduce_aging_patient_view import main as run_aging
-        print("=" * 50)
-        print("  Aging Patient View")
-        print("=" * 50)
-        run_aging()
-        print()
+    choice = input().strip()
 
-    if fig in ("ra", "all"):
-        from steeramed_core.examples.reproduce_ra_evidence_chain import main as run_ra
-        print("=" * 50)
-        print("  RA N=1 Evidence Chain")
-        print("=" * 50)
-        run_ra()
-        print()
+    try:
+        n = int(choice)
+        if 1 <= n <= len(catalog):
+            _generate_case(catalog[n - 1])
+            return
+    except ValueError:
+        pass
 
-    if fig in ("dep", "all"):
-        from steeramed_core.examples.reproduce_dep_evidence_chain import main as run_dep
-        print("=" * 50)
-        print("  Depression N=1 Evidence Chain")
-        print("=" * 50)
-        run_dep()
-        print()
+    entry = next((c for c in catalog if c["id"] == choice), None)
+    if entry:
+        _generate_case(entry)
+        return
 
-    print("All done! Check the results/ directory.")
+    print(f"Invalid choice: {choice}")
+    sys.exit(1)
 
 
 if __name__ == "__main__":

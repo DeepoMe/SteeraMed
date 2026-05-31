@@ -1,194 +1,127 @@
-<div align="center">
+# SteeraMed Core
 
-**[English](README.md) | [中文](README.zh-CN.md)**
+[English](README.md) | [中文](README.zh-CN.md)
 
-# 🧬 SteeraMed Core
+[![PyPI](https://img.shields.io/badge/steeramed--core-0.1.0-blue)](https://pypi.org/project/steeramed-core/)
+[![Python](https://img.shields.io/badge/python-3.9+-green)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Preprint](https://img.shields.io/badge/preprint-2025-orange)](https://doi.org/10.20944/preprints202605.1578.v1)
 
-**Steerable Biomedical World Model for N-of-1 Intervention Reasoning**
+**First N-of-1 Steerable Medicine World Model — Personalized intervention evidence chains from DNA methylation data.**
 
-[![PyPI](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Technical Report](https://img.shields.io/badge/report-preprints.org-orange.svg)](https://doi.org/10.20944/preprints202605.1578.v1)
-[![Live Demo](https://img.shields.io/badge/demo-agent.steerable.world-purple.svg)](https://agent.steerable.world)
+> Select a patient case → Generate individualized drug evidence in 30 seconds.
 
-</div>
+## What is Steerable Medicine?
 
----
+Traditional systems biology:
+- Population statistics → average effects → universal guidelines
+- "Is this drug effective for the population?"
 
-**One command → all figures from the paper. Zero configuration.**
+Steerable Medicine (SMWM):
+- Individual perturbation → matched PPI modules → personalized evidence chain
+- "Is this drug effective **for you**?"
 
-```bash
-pip install steeramed-core && python -m steeramed_core reproduce --fig all
+| | Systems Biology | Steerable Medicine |
+|---|---|---|
+| Unit of analysis | Population | Individual (N-of-1) |
+| Question | Group average | Personal match |
+| Output | General guideline | 4-layer evidence chain |
+| Drug ranking | Clinical trials | SA alignment + bootstrap |
+
+## Four-Layer Evidence Chain
+
+```
+Layer 1: PPI Module Perturbation  ← "What's different in your biology?"
+Layer 2: Compound SA Alignment    ← "Which compounds can correct it?"
+Layer 3: Mechanism Annotation     ← "Why does this compound work?"
+Layer 4: Bootstrap Confidence     ← "How reliable is this result?"
 ```
 
----
-
-## 🖼️ What You Get
-
-### Aging Patient View — Personalized Hallmark Report
-
-<table><tr>
-<td width="50%"><img src="docs/fig4_aging_patient.png" alt="Aging Patient View" width="100%"/></td>
-<td width="50%"><img src="docs/fig_s1_aging_evidence.png" alt="Aging Evidence Chain" width="100%"/></td>
-</tr></table>
-
-*Left: Hallmark-based biological age assessment with compound recommendations. Right: Four-layer evidence chain — PPI perturbation, compound ranking, mechanism network, bootstrap confidence.*
-
-### Rheumatoid Arthritis — N=1 Evidence Chain
-
-<table><tr>
-<td width="50%"><img src="docs/fig6_ra_evidence.png" alt="RA Evidence Chain" width="100%"/></td>
-<td width="50%"><img src="docs/fig7_ra_patient.png" alt="RA Patient View" width="100%"/></td>
-</tr></table>
-
-*Patient GSM1052147 (Male, 51y). 10 perturbed PPI modules identified. Top compound: Pentoxifylline (SA=9.49).*
-
-### Depression — N=1 Evidence Chain
-
-<table><tr>
-<td width="50%"><img src="docs/fig8_dep_evidence.png" alt="Depression Evidence Chain" width="100%"/></td>
-<td width="50%"><img src="docs/fig_s2_dep_patient.png" alt="Depression Patient View" width="100%"/></td>
-</tr></table>
-
-*Patient GSM3667899 (Male, 52y). Neutrophil degranulation pathway dominant. Top compound: Creatine (SA=9.58).*
-
----
-
-## ⚡ Quick Start
-
-### Install & Reproduce
+## Quick Start
 
 ```bash
-# Install
 pip install steeramed-core
-
-# Reproduce all paper figures (generates 6 PNGs in results/)
-python -m steeramed_core reproduce --fig all
-
-# Or reproduce specific disease
-python -m steeramed_core reproduce --fig aging
-python -m steeramed_core reproduce --fig ra
-python -m steeramed_core reproduce --fig dep
+python -m steeramed_core
 ```
 
-All figures are generated using **built-in example patient data** — no downloads, no API keys, no configuration.
+Interactive case selector:
 
-### Use as a Library
+```
+🧬 SteeraMed Core — N-of-1 Evidence Chain Explorer
+═════════════════════════════════════════════════════
+
+Select a patient case:
+  [1] 🧓 Aging · Population Screening
+  [2] 🧑 RA · 51M · T-cell Perturbation
+  [3] 🧑 Depression · 52M · Innate Immunity
+
+Enter choice [1-3]: 2
+
+✅ Generated 4 figures in results/:
+  📊 hallmark_bar.png      — Hallmark perturbation profile
+  💊 drug_ranking.png       — Top-10 compound ranking
+  🔗 evidence_network.png  — Drug-PPI-Hallmark alignment
+  📋 patient_card.png       — One-page patient summary
+```
+
+Batch mode:
+
+```bash
+python -m steeramed_core --all          # all cases
+python -m steeramed_core --case ra_303  # specific case
+python -m steeramed_core --list         # list available cases
+```
+
+## Gallery
+
+**Patient Summary Card** (Aging case):
+
+![Patient Card](docs/aging_patient_card.png)
+
+**Drug Ranking** (RA case):
+
+![Drug Ranking](docs/ra_drug_ranking.png)
+
+**Hallmark Perturbation** (Aging case):
+
+![Hallmark Bar](docs/aging_hallmark_bar.png)
+
+**Patient Summary Card** (RA case):
+
+![RA Patient Card](docs/ra_patient_card.png)
+
+## Available Cases
+
+| Case | Disease | Key Finding | Evidence |
+|------|---------|-------------|----------|
+| Aging · Population | GSE40279 | Niacin #1, 2/5 geroprotectors | MODERATE |
+| RA · 51M | GSE42861 | 6/10 known RA drugs, pentoxifylline #1 | STRONG |
+| Depression · 52M | GSE128235 | creatine #1, innate immunity | EXPLORATORY |
+
+## API
 
 ```python
-from steeramed_core import load_example_patient
-from steeramed_core.viz.evidence_view import plot_evidence_chain
-from steeramed_core.viz.patient_view import plot_patient_view
+import json
+from pathlib import Path
+from steeramed_core.viz.patient_card import plot_patient_card
+from steeramed_core.viz.drug_ranking import plot_drug_ranking
 
-# Load built-in example patient
-patient = load_example_patient("ra_patient_303")
-print(patient.summary())
-
-# Generate publication-quality figures
-plot_evidence_chain(patient, save="evidence.pdf")
-plot_patient_view(patient, save="report.png")
+p = Path(__file__).parent / "steeramed_core" / "presets" / "example_patients"
+data = json.loads((p / "ra_patient_303.json").read_text(encoding="utf-8"))
+fig = plot_patient_card(data)
+fig.savefig("my_patient_card.png", dpi=300)
 ```
 
-### Core Algorithm: SA Score
+## Data Sources
 
-```python
-from steeramed_core.core.semo import compute_sa_score
-import numpy as np
+- **PPI Network**: STRING v12.0 (CC BY 4.0)
+- **Compound Targets**: STITCH (CC BY-NC, academic use only)
+- **Methylation Data**: GEO (public domain)
+- **Hallmark Gene Sets**: MSigDB (CC BY 4.0)
 
-delta = np.random.randn(1000)
-target_idx = [10, 20, 30, 40, 50]
-non_target_idx = list(range(100, 900))
+## Citation
 
-sa = compute_sa_score(delta, target_idx, non_target_idx)
-print(f"Steerability Alignment score: {sa:.3f}")
-```
-
----
-
-## 🏗️ How It Works
-
-SteeraMed reasons about **which compounds can steer an individual patient's molecular state back toward health**, using only DNA methylation data and public databases (STRING PPI + STITCH compound-target).
-
-### Four-Layer Evidence Chain
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  Layer 1: PPI Module Perturbation                       │
-│  Which protein interaction modules are dysregulated?     │
-│  Method: Welch t-test on module gene delta vectors       │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: Compound Steerability Alignment (SA)           │
-│  Which compounds target those perturbed modules?         │
-│  Method: Importance-weighted SA score ranking            │
-├─────────────────────────────────────────────────────────┤
-│  Layer 3: Mechanism Annotation                           │
-│  How do compound targets map to PPI module hubs?         │
-│  Method: Target → PPI neighbor → hub gene tracing        │
-├─────────────────────────────────────────────────────────┤
-│  Layer 4: Bootstrap Confidence                           │
-│  How stable is the ranking under resampling?             │
-│  Method: 1000-iteration bootstrap with top-k stability   │
-└─────────────────────────────────────────────────────────┘
-```
-
-### N=1 Delta Vector
-
-For each patient, SteeraMed computes an individualized delta vector:
-
-$$\Delta_i = x_i - \bar{x}_{matched}$$
-
-where matched controls are selected by age (±5 years) and sex. This delta vector is then used to identify perturbed PPI modules and rank candidate compounds.
-
----
-
-## 📁 Project Structure
-
-```
-steeramed_core/
-├── core/
-│   ├── config.py            # Disease presets (RA, depression, aging, breast cancer)
-│   ├── semo.py              # SA score + Welch t-test + importance voting
-│   ├── delta.py             # N=1 delta vector + age/sex matching
-│   └── evidence_chain.py    # Four-layer evidence chain dataclass
-├── viz/
-│   ├── theme.py             # Unified visual theme (Nature-grade palette)
-│   ├── patient_view.py      # Patient-friendly three-panel card view
-│   └── evidence_view.py     # Scientist four-panel evidence chain
-├── presets/
-│   ├── datasets.json        # Dataset metadata (GSE IDs, sample sizes)
-│   ├── positive_controls.json
-│   └── example_patients/    # Built-in patient data (3 examples)
-│       ├── aging_patient_rep.json
-│       ├── ra_patient_303.json
-│       └── dep_patient_61.json
-└── examples/
-    ├── reproduce_aging_patient_view.py   # Fig 4 + Fig S1
-    ├── reproduce_ra_evidence_chain.py    # Fig 6 + Fig 7
-    └── reproduce_dep_evidence_chain.py   # Fig 8 + Fig S2
-```
-
----
-
-## 📊 Supported Diseases
-
-| Disease | GEO Dataset | Tissue | N Cases | N Controls |
-|---------|-------------|--------|---------|------------|
-| Aging | GSE40279 | Whole blood | 473 (old) | 109 (young) |
-| Rheumatoid Arthritis | GSE42861 | Whole blood | 354 | 335 |
-| Depression | GSE128235 | Whole blood | 324 | 209 |
-| Breast Cancer | GSE51032 | — | 235 | 424 |
-
----
-
-## 🌐 Live Demo
-
-Experience the interactive version at **[agent.steerable.world](https://agent.steerable.world)** — the same SteeraMed algorithms with animated visualizations, demo cases, and CSV upload support.
-
----
-
-## 📝 Technical Report
-
-> Xiong J. *SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* Preprints.org, 2026. DOI: [10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
+If you use SteeraMed Core in your research:
 
 ```bibtex
 @article{xiong2026steeramed,
@@ -200,14 +133,10 @@ Experience the interactive version at **[agent.steerable.world](https://agent.st
 }
 ```
 
----
+## Disclaimer
 
-## ⚠️ Disclaimer
-
-This software generates **hypothesis-generating insights only**. It is not a medical device and does not provide treatment recommendations. Always consult qualified healthcare professionals for medical decisions.
-
----
+This software generates hypothesis-generating insights only. It is not a medical device and does not provide treatment recommendations. Always consult qualified healthcare professionals for medical decisions.
 
 ## License
 
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License. Note: STITCH compound-target data is CC BY-NC; commercial use requires separate licensing.

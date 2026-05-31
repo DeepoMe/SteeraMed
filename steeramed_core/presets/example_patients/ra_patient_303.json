@@ -15,70 +15,70 @@
       "delta": 0.0222,
       "p_value": 2.81e-12,
       "n_genes": 134,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "CD8B",
       "delta": 0.0253,
       "p_value": 1.14e-11,
       "n_genes": 95,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "TRAT1",
       "delta": 0.0167,
       "p_value": 2.75e-11,
       "n_genes": 157,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "ITK",
       "delta": 0.0155,
       "p_value": 3.19e-9,
       "n_genes": 194,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "CD6",
       "delta": 0.0203,
       "p_value": 1.49e-8,
       "n_genes": 130,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "CD96",
       "delta": 0.0224,
       "p_value": 2.41e-8,
       "n_genes": 103,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "TRAF3IP3",
       "delta": 0.0181,
       "p_value": 3.38e-8,
       "n_genes": 77,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "UBASH3A",
       "delta": 0.019,
       "p_value": 5.38e-8,
       "n_genes": 78,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "SLAMF6",
       "delta": 0.0206,
       "p_value": 7.35e-7,
       "n_genes": 124,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     },
     {
       "hub_gene": "PTPRCAP",
       "delta": 0.028,
       "p_value": 0.00000112,
       "n_genes": 43,
-      "hallmark": null
+      "hallmark": "Chronic Inflammation"
     }
   ],
   "top_compounds": [
@@ -98,7 +98,8 @@
             "CTSG",
             "IL10",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "CEACAM6",
@@ -107,7 +108,8 @@
             "AZU1",
             "CTSG",
             "MPO"
-          ]
+          ],
+          "hallmark": "Loss of Proteostasis"
         },
         {
           "ppi_hub": "DEFA4",
@@ -117,7 +119,8 @@
             "CTSG",
             "MPO",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -137,7 +140,8 @@
             "CTSG",
             "IL10",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "CEACAM6",
@@ -146,7 +150,8 @@
             "AZU1",
             "CTSG",
             "MPO"
-          ]
+          ],
+          "hallmark": "Epigenetic Alterations"
         },
         {
           "ppi_hub": "DEFA4",
@@ -156,7 +161,8 @@
             "CTSG",
             "MPO",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -176,7 +182,8 @@
             "AZU1",
             "CTSG",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "DEFA4",
@@ -186,7 +193,8 @@
             "CTSG",
             "MPO",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "RNASE3",
@@ -197,7 +205,8 @@
             "IL10",
             "MPO",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -217,7 +226,8 @@
             "AZU1",
             "CTSG",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "DEFA4",
@@ -227,7 +237,8 @@
             "CTSG",
             "MPO",
             "PRTN3"
-          ]
+          ],
+          "hallmark": "Mitochondrial Dysfunction"
         }
       ]
     },
@@ -247,7 +258,8 @@
             "ALB",
             "CASP3",
             "IFNG"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         },
         {
           "ppi_hub": "ELANE",
@@ -256,7 +268,8 @@
             "ALB",
             "CASP3",
             "IFNG"
-          ]
+          ],
+          "hallmark": "Epigenetic Alterations"
         }
       ]
     },
@@ -276,7 +289,8 @@
             "CD2",
             "CD52",
             "ITGAL"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -296,7 +310,8 @@
             "CD2",
             "CD52",
             "ITGAL"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -316,7 +331,8 @@
             "CD2",
             "CD52",
             "ITGAL"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -336,7 +352,8 @@
             "CD2",
             "CD52",
             "ITGAL"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     },
@@ -356,7 +373,8 @@
             "CTSG",
             "IL10",
             "MPO"
-          ]
+          ],
+          "hallmark": "Chronic Inflammation"
         }
       ]
     }
@@ -377,5 +395,157 @@
     "CIDm00000312": 0.165,
     "CIDm00000774": 0.155,
     "imatinib": 0.15
+  },
+  "mechanism_map": {
+    "CIDm00004740": {
+      "ppi_hubs": [
+        "OLFM4",
+        "CEACAM6",
+        "DEFA4"
+      ],
+      "target_genes": [
+        "CTSG",
+        "IL10",
+        "MPO",
+        "AZU1",
+        "PRTN3"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Loss of Proteostasis"
+      ]
+    },
+    "CIDm00054454": {
+      "ppi_hubs": [
+        "OLFM4",
+        "CEACAM6",
+        "DEFA4"
+      ],
+      "target_genes": [
+        "CTSG",
+        "IL10",
+        "MPO",
+        "AZU1",
+        "PRTN3"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Epigenetic Alterations"
+      ]
+    },
+    "CIDm23690938": {
+      "ppi_hubs": [
+        "CEACAM6",
+        "DEFA4",
+        "RNASE3"
+      ],
+      "target_genes": [
+        "AZU1",
+        "CTSG",
+        "MPO",
+        "PRTN3",
+        "IL10"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00002116": {
+      "ppi_hubs": [
+        "CEACAM6",
+        "DEFA4"
+      ],
+      "target_genes": [
+        "AZU1",
+        "CTSG",
+        "MPO",
+        "PRTN3"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Mitochondrial Dysfunction"
+      ]
+    },
+    "CIDm00004033": {
+      "ppi_hubs": [
+        "PRTN3",
+        "ELANE"
+      ],
+      "target_genes": [
+        "ALB",
+        "CASP3",
+        "IFNG"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Epigenetic Alterations"
+      ]
+    },
+    "CIDs00126941": {
+      "ppi_hubs": [
+        "RASAL3"
+      ],
+      "target_genes": [
+        "CD2",
+        "CD52",
+        "ITGAL"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00004112": {
+      "ppi_hubs": [
+        "RASAL3"
+      ],
+      "target_genes": [
+        "CD2",
+        "CD52",
+        "ITGAL"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDs00005865": {
+      "ppi_hubs": [
+        "RASAL3"
+      ],
+      "target_genes": [
+        "CD2",
+        "CD52",
+        "ITGAL"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation",
+        "Loss of Proteostasis"
+      ]
+    },
+    "CIDm00004900": {
+      "ppi_hubs": [
+        "RASAL3"
+      ],
+      "target_genes": [
+        "CD2",
+        "CD52",
+        "ITGAL"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    },
+    "CIDm00002907": {
+      "ppi_hubs": [
+        "OLFM4"
+      ],
+      "target_genes": [
+        "CTSG",
+        "IL10",
+        "MPO"
+      ],
+      "hallmarks": [
+        "Chronic Inflammation"
+      ]
+    }
   }
 }
