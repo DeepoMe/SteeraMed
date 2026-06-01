@@ -1,197 +1,136 @@
-<div align="center">
+# SteeraMed Core
 
-**[English](README.md) | [中文](README.zh-CN.md)**
+[English](README.md) | [中文](README.zh-CN.md)
 
-# 🧬 SteeraMed Core
+[![PyPI](https://img.shields.io/badge/steeramed--core-0.1.0-blue)](https://pypi.org/project/steeramed-core/)
+[![Python](https://img.shields.io/badge/python-3.9+-green)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Preprint](https://img.shields.io/badge/preprint-2025-orange)](https://doi.org/10.20944/preprints202605.1578.v1)
 
-**SteeraMed：可驭生物医学世界模型**
+**SteeraMed：可驭生物医学世界模型** — 基于 DNA 甲基化数据的个体化干预证据链，面向长寿、衰老和慢性疾病。
 
-[![PyPI](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Technical Report](https://img.shields.io/badge/report-preprints.org-orange.svg)](https://doi.org/10.20944/preprints202605.1578.v1)
-[![Live Demo](https://img.shields.io/badge/demo-agent.steerable.world-purple.svg)](https://agent.steerable.world)
+> 选择患者案例 → 30 秒生成个体化药物证据。
+> [SteeraMed.com](https://steeramed.com) · [论文](https://doi.org/10.20944/preprints202605.1578.v1)
 
-</div>
+## 什么是生物医学世界模型？
 
----
+传统系统生物学：
+- 群体统计 → 平均效应 → 通用指南
+- "这个药对群体有效吗？"
 
-**一条命令 → 复现论文全部图表。零配置。**
+可驭生物医学世界模型 (SBWM)：
+- 个体扰动 → 匹配 PPI 模块 → 个体化证据链
+- "这个药对**你**有效吗？"
 
-```bash
-pip install steeramed-core && python -m steeramed_core reproduce --fig all
+核心区别：
+| | 系统生物学 | 可驭生物医学世界模型 |
+|---|---|---|
+| 分析单位 | 群体 | 个体 (N-of-1) |
+| 核心问题 | 群体均值 | 个人匹配 |
+| 输出 | 通用指南 | 四层证据链 |
+| 药物排名 | 临床试验 | SA 对齐 + Bootstrap |
+
+## 四层证据链
+
+```
+Layer 1: PPI 模块扰动      ← "你的生物学有什么不同？"
+Layer 2: 化合物 SA 对齐    ← "哪些化合物可以纠正？"
+Layer 3: 机制注释          ← "为什么这个化合物有效？"
+Layer 4: Bootstrap 置信度  ← "这个结果有多可靠？"
 ```
 
----
-
-## 🖼️ 输出展示
-
-### 衰老患者视图 — 个体化 Hallmark 报告
-
-<table><tr>
-<td width="50%"><img src="docs/fig4_aging_patient.png" alt="Aging Patient View" width="100%"/></td>
-<td width="50%"><img src="docs/fig_s1_aging_evidence.png" alt="Aging Evidence Chain" width="100%"/></td>
-</tr></table>
-
-*左：基于 Hallmark 的生物学年龄评估与化合物推荐。右：四层证据链 — PPI 扰动模块、化合物排名、机制网络、Bootstrap 置信度。*
-
-### 类风湿关节炎 — N=1 证据链
-
-<table><tr>
-<td width="50%"><img src="docs/fig6_ra_evidence.png" alt="RA Evidence Chain" width="100%"/></td>
-<td width="50%"><img src="docs/fig7_ra_patient.png" alt="RA Patient View" width="100%"/></td>
-</tr></table>
-
-*患者 GSM1052147（男，51岁）。检出 10 个扰动 PPI 模块。Top 化合物：己酮可可碱（SA=9.49）。*
-
-### 抑郁症 — N=1 证据链
-
-<table><tr>
-<td width="50%"><img src="docs/fig8_dep_evidence.png" alt="Depression Evidence Chain" width="100%"/></td>
-<td width="50%"><img src="docs/fig_s2_dep_patient.png" alt="Depression Patient View" width="100%"/></td>
-</tr></table>
-
-*患者 GSM3667899（男，52岁）。中性粒细胞脱颗粒通路主导。Top 化合物：肌酸（SA=9.58）。*
-
----
-
-## ⚡ 快速开始
-
-### 安装与复现
+## 快速开始
 
 ```bash
-# 安装
 pip install steeramed-core
-
-# 复现论文全部图表（在 results/ 下生成 6 张 PNG）
-python -m steeramed_core reproduce --fig all
-
-# 或按疾病单独复现
-python -m steeramed_core reproduce --fig aging
-python -m steeramed_core reproduce --fig ra
-python -m steeramed_core reproduce --fig dep
+python -m steeramed_core
 ```
 
-所有图表均使用**内置示例患者数据**生成 — 无需下载、无需 API Key、零配置。
+交互式案例选择器：
 
-### 作为库使用
+```
+🧬 SteeraMed Core — N-of-1 证据链浏览器
+═════════════════════════════════════════════════════
+
+选择患者案例：
+  [1] 🧓 衰老 · 群体筛查
+  [2] 🧑 类风湿关节炎 · 51岁男 · T细胞扰动
+  [3] 🧑 抑郁症 · 52岁男 · 先天免疫
+
+输入选择 [1-3]: 2
+
+✅ 已生成 4 张图表到 results/：
+  📊 hallmark_bar.png      — Hallmark 扰动画像
+  💊 drug_ranking.png       — Top-10 化合物排名
+  🔗 evidence_network.png  — 药物-PPI-Hallmark 对齐
+  📋 patient_card.png       — 单页患者摘要
+```
+
+批量模式：
+
+```bash
+python -m steeramed_core --all          # 所有案例
+python -m steeramed_core --case ra_303  # 指定案例
+python -m steeramed_core --list         # 列出可用案例
+```
+
+## 图表展示
+
+**患者摘要卡**（衰老案例）：
+
+![患者摘要卡](docs/aging_patient_card.png)
+
+**药物排名**（类风湿关节炎案例）：
+
+![药物排名](docs/ra_drug_ranking.png)
+
+**Hallmark 扰动**（衰老案例）：
+
+![Hallmark 扰动](docs/aging_hallmark_bar.png)
+
+**患者摘要卡**（类风湿关节炎案例）：
+
+![RA 患者摘要卡](docs/ra_patient_card.png)
+
+## 可用案例
+
+| 案例 | 疾病 | 关键发现 | 证据等级 |
+|------|------|---------|---------|
+| 衰老 · 群体 | GSE40279 | 烟酸 #1，2/5 衰老保护剂 | MODERATE |
+| RA · 51岁男 | GSE42861 | 6/10 已知 RA 药物，己酮可可碱 #1 | STRONG |
+| 抑郁症 · 52岁男 | GSE128235 | 肌酸 #1，先天免疫通路 | EXPLORATORY |
+
+## API
 
 ```python
-from steeramed_core import load_example_patient
-from steeramed_core.viz.evidence_view import plot_evidence_chain
-from steeramed_core.viz.patient_view import plot_patient_view
+import json
+from pathlib import Path
+from steeramed_core.viz.patient_card import plot_patient_card
+from steeramed_core.viz.drug_ranking import plot_drug_ranking
 
-# 加载内置示例患者
-patient = load_example_patient("ra_patient_303")
-print(patient.summary())
-
-# 生成出版级图表
-plot_evidence_chain(patient, save="evidence.pdf")
-plot_patient_view(patient, save="report.png")
+p = Path(__file__).parent / "steeramed_core" / "presets" / "example_patients"
+data = json.loads((p / "ra_patient_303.json").read_text(encoding="utf-8"))
+fig = plot_patient_card(data)
+fig.savefig("my_patient_card.png", dpi=300)
 ```
 
-### 核心算法：SA Score
+## 数据来源与致谢
 
-```python
-from steeramed_core.core.semo import compute_sa_score
-import numpy as np
+本包包含来自以下开放数据库的预计算结果。衷心感谢原始数据提供者：
 
-delta = np.random.randn(1000)
-target_idx = [10, 20, 30, 40, 50]
-non_target_idx = list(range(100, 900))
+- **PPI 网络**: STRING v12.5 — Szklarczyk et al., *Nucleic Acids Res* 53(D1), 2025. [CC BY 4.0](https://string-db.org/cgi/access?footer_active_subpage=licensing)
+- **化合物-靶点互作**: STITCH — Kuhn et al., *Nucleic Acids Res* 36(Database), 2008. [CC BY-NC](http://stitch-db.org) — **本包仅将 STITCH 衍生数据用于学术研究；商业应用需获得 [EMBL 单独授权](mailto:stitch@embl.de)**
+- **甲基化数据**: GEO (NCBI) — 公共领域
+- **Hallmark 基因集**: MSigDB — Liberzon et al., *PNAS* 112(25), 2015. [CC BY 4.0](https://www.gsea-msigdb.org/gsea/msigdb_license.jsp)
 
-sa = compute_sa_score(delta, target_idx, non_target_idx)
-print(f"Steerability Alignment score: {sa:.3f}")
-```
+> **注意**：本仓库分发的是**预计算分析结果**（如排名化合物列表、PPI 模块摘要），而非原始 STRING 或 STITCH 数据库。希望访问或再分发底层数据库的用户必须遵守其各自的许可条款。
 
----
+## 引用
 
-## 🏗️ 工作原理
+如果您在研究中使用 SteeraMed Core，请引用两篇伴生论文：
 
-SteeraMed 推理**哪些化合物能够将个体患者的分子状态引导回健康方向**，仅需 DNA 甲基化数据与公共数据库（PPI 网络 + 化合物靶点互作）。
-
-### 四层证据链
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  Layer 1: PPI 模块扰动                                   │
-│  哪些蛋白质互作模块发生了失调？                              │
-│  方法：对模块基因 delta 向量执行 Welch t 检验               │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: 化合物可驭性对齐（SA）                           │
-│  哪些化合物靶向了这些扰动模块？                              │
-│  方法：重要性加权 SA Score 排名                             │
-├─────────────────────────────────────────────────────────┤
-│  Layer 3: 机制注释                                        │
-│  化合物靶点如何映射到 PPI 模块枢纽？                        │
-│  方法：靶点 → PPI 邻居 → 枢纽基因追踪                      │
-├─────────────────────────────────────────────────────────┤
-│  Layer 4: Bootstrap 置信度                                │
-│  重采样下排名是否稳定？                                     │
-│  方法：1000 次 Bootstrap 迭代 + top-k 稳定性检验            │
-└─────────────────────────────────────────────────────────┘
-```
-
-### N=1 Delta 向量
-
-对每位患者，SteeraMed 计算个体化 delta 向量：
-
-$$\Delta_i = x_i - \bar{x}_{matched}$$
-
-其中匹配对照按年龄（±5 岁）和性别选取。该 delta 向量随后用于识别扰动 PPI 模块并排序候选化合物。
-
----
-
-## 📁 项目结构
-
-```
-steeramed_core/
-├── core/
-│   ├── config.py            # 疾病预设（RA、抑郁症、衰老、乳腺癌）
-│   ├── semo.py              # SA Score + Welch t 检验 + 重要性投票
-│   ├── delta.py             # N=1 delta 向量 + 年龄/性别匹配
-│   └── evidence_chain.py    # 四层证据链 dataclass
-├── viz/
-│   ├── theme.py             # 统一视觉主题（Nature 级配色）
-│   ├── patient_view.py      # 患者友好三面板卡片视图
-│   └── evidence_view.py     # 科学家四面板证据链
-├── presets/
-│   ├── datasets.json        # 数据集元信息（GSE ID、样本量）
-│   ├── positive_controls.json
-│   └── example_patients/    # 内置患者数据（3 个示例）
-│       ├── aging_patient_rep.json
-│       ├── ra_patient_303.json
-│       └── dep_patient_61.json
-└── examples/
-    ├── reproduce_aging_patient_view.py   # Fig 4 + Fig S1
-    ├── reproduce_ra_evidence_chain.py    # Fig 6 + Fig 7
-    └── reproduce_dep_evidence_chain.py   # Fig 8 + Fig S2
-```
-
----
-
-## 📊 支持的疾病
-
-| 疾病 | GEO 数据集 | 组织 | 病例数 | 对照数 |
-|------|-----------|------|--------|--------|
-| 衰老 | GSE40279 | 全血 | 473（老年） | 109（青年） |
-| 类风湿关节炎 | GSE42861 | 全血 | 354 | 335 |
-| 抑郁症 | GSE128235 | 全血 | 324 | 209 |
-| 乳腺癌 | GSE51032 | — | 235 | 424 |
-
----
-
-## 🌐 在线演示
-
-访问 **[agent.steerable.world](https://agent.steerable.world)** 体验交互版本 — 相同的 SteeraMed 算法，配备动画可视化、演示案例和 CSV 上传支持。
-
----
-
-## 📝 技术报告
-
-本包涉及两篇伴生论文（companion papers）：
-
-- 框架论文：Xiong J. *World Models for Biomedicine: A Steerability Framework.* DOI: [10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
-- 实现论文：Xiong J. *SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* DOI: [10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
+- 框架论文：Xiong J. *World Models for Biomedicine: A Steerability Framework.* [doi:10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
+- 实现论文：Xiong J. *SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* [doi:10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
 
 ```bibtex
 @article{xiong2026steeramed,
@@ -210,29 +149,16 @@ steeramed_core/
 }
 ```
 
----
+## 免责声明
 
-## ⚠️ 免责声明
-
-本软件仅生成**假设生成性洞见**，不是医疗器械，不提供治疗建议。医疗决策请务必咨询合格的专业医护人员。
+本软件仅生成假设生成性洞见，不是医疗器械，不提供治疗建议。医疗决策请务必咨询合格的专业医护人员。
 
 ## 关键词
 
 `biomedical world model` · `medical world model` · `steerability` · `longevity` · `aging` · `personalized medicine` · `n-of-1` · `DNA methylation` · `epigenetics` · `drug ranking` · `PPI network` · `evidence chain` · `precision medicine` · `intervention reasoning` · `rheumatoid arthritis` · `depression` · `hallmark` · `methylation age`
-
----
 
 ## 许可证
 
 MIT 许可证。仅适用于本仓库的**代码**。
 
 `steeramed_core/presets/` 中的**预计算数据文件**包含 STITCH (CC BY-NC) 的衍生结果，仅供**学术研究和教育用途**。商业用途需获得 [EMBL 授权](mailto:stitch@embl.de)。
-
-### 数据来源与致谢
-
-- **PPI 网络**: STRING v12.5 — CC BY 4.0
-- **化合物-靶点互作**: STITCH — CC BY-NC（仅学术用途）
-- **甲基化数据**: GEO (NCBI) — 公共领域
-- **Hallmark 基因集**: MSigDB — CC BY 4.0
-
-> 本仓库分发的是**预计算分析结果**（排名化合物列表、PPI 模块摘要），而非原始 STRING 或 STITCH 数据库。
