@@ -1,9 +1,11 @@
 """
 SteeraMed Core — Steerable Biomedical World Model for N-of-1 Intervention Reasoning.
 
-Reproduce all figures from:
-    Xiong J. (2026) SteeraMed: A Steerable Biomedical World Model for N-of-1
-    Intervention Reasoning. Preprints.org. DOI: 10.20944/preprints202605.0366.v1
+Reproduce all figures from the companion papers:
+    Xiong J. (2026) SteeraMed: A Biomedical World Model for N-of-1
+    Intervention Reasoning. Preprints.org. DOI: 10.20944/preprints202605.1578.v1
+    Xiong J. (2026) World Models for Biomedicine: A Steerability Framework.
+    Preprints.org. DOI: 10.20944/preprints202605.0366.v1
 """
 
 __version__ = "0.1.0"

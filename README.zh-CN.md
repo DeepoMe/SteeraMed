@@ -8,7 +8,7 @@
 
 [![PyPI](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Technical Report](https://img.shields.io/badge/report-preprints.org-orange.svg)](https://doi.org/10.20944/preprints202605.0366.v1)
+[![Technical Report](https://img.shields.io/badge/report-preprints.org-orange.svg)](https://doi.org/10.20944/preprints202605.1578.v1)
 [![Live Demo](https://img.shields.io/badge/demo-agent.steerable.world-purple.svg)](https://agent.steerable.world)
 
 </div>
@@ -188,11 +188,21 @@ steeramed_core/
 
 ## 📝 技术报告
 
-> Xiong J. *SteeraMed: A Steerable Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* Preprints.org, 2026. DOI: [10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
+本包涉及两篇伴生论文（companion papers）：
+
+- 框架论文：Xiong J. *World Models for Biomedicine: A Steerability Framework.* DOI: [10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
+- 实现论文：Xiong J. *SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* DOI: [10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
 
 ```bibtex
 @article{xiong2026steeramed,
-  title={SteeraMed: A Steerable Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging},
+  title={SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging},
+  author={Xiong, Jianghui},
+  journal={Preprints.org},
+  year={2026},
+  doi={10.20944/preprints202605.1578.v1}
+}
+@article{xiong2026framework,
+  title={World Models for Biomedicine: A Steerability Framework},
   author={Xiong, Jianghui},
   journal={Preprints.org},
   year={2026},

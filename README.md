@@ -5,12 +5,12 @@
 [![PyPI](https://img.shields.io/badge/steeramed--core-0.1.0-blue)](https://pypi.org/project/steeramed-core/)
 [![Python](https://img.shields.io/badge/python-3.9+-green)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Preprint](https://img.shields.io/badge/preprint-2025-orange)](https://doi.org/10.20944/preprints202605.0366.v1)
+[![Preprint](https://img.shields.io/badge/preprint-2025-orange)](https://doi.org/10.20944/preprints202605.1578.v1)
 
 **SteeraMed: A Steerable Biomedical World Model** — Personalized intervention evidence chains from DNA methylation data.
 
 > Select a patient case → Generate individualized drug evidence in 30 seconds.
-> [SteeraMed.com](https://steeramed.com) · [Paper](https://doi.org/10.20944/preprints202605.0366.v1)
+> [SteeraMed.com](https://steeramed.com) · [Paper](https://doi.org/10.20944/preprints202605.1578.v1)
 
 ## What is a Biomedical World Model?
 
@@ -127,14 +127,21 @@ This package includes pre-computed results derived from the following open datab
 
 ## Citation
 
-If you use SteeraMed Core in your research, please cite:
+If you use SteeraMed Core in your research, please cite both companion papers:
 
-- Main paper: [doi:10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
-- Supplementary: [doi:10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
+- Framework paper: Xiong J. *World Models for Biomedicine: A Steerability Framework.* [doi:10.20944/preprints202605.0366.v1](https://doi.org/10.20944/preprints202605.0366.v1)
+- Implementation paper: Xiong J. *SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging.* [doi:10.20944/preprints202605.1578.v1](https://doi.org/10.20944/preprints202605.1578.v1)
 
 ```bibtex
 @article{xiong2026steeramed,
-  title={SteeraMed: A Steerable Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging},
+  title={SteeraMed: A Biomedical World Model for N-of-1 Intervention Reasoning across Chronic Diseases and Aging},
+  author={Xiong, Jianghui},
+  journal={Preprints.org},
+  year={2026},
+  doi={10.20944/preprints202605.1578.v1}
+}
+@article{xiong2026framework,
+  title={World Models for Biomedicine: A Steerability Framework},
   author={Xiong, Jianghui},
   journal={Preprints.org},
   year={2026},
