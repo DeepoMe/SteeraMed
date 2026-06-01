@@ -12,6 +12,35 @@ requires-python = ">=3.9"
 authors = [
     {name = "Jianghui Xiong", email = "jianghui@deepome.com"},
 ]
+keywords = [
+    "biomedical-world-model",
+    "medical-world-model",
+    "steerability",
+    "longevity",
+    "aging",
+    "personalized-medicine",
+    "n-of-1",
+    "dna-methylation",
+    "drug-ranking",
+    "ppi-network",
+    "evidence-chain",
+    "epigenetics",
+    "intervention",
+    "precision-medicine",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
 dependencies = [
     "numpy>=1.21",
     "pandas>=1.3",
@@ -21,6 +50,13 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=7.0", "seaborn>=0.11"]
+
+[project.urls]
+Homepage = "https://steeramed.com"
+Repository = "https://github.com/DeepoMe/SteeraMed"
+Paper = "https://doi.org/10.20944/preprints202605.1578.v1"
+Framework = "https://doi.org/10.20944/preprints202605.0366.v1"
+Demo = "https://agent.steerable.world"
 
 [tool.setuptools.packages.find]
 where = ["."]

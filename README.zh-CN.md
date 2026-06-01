@@ -216,6 +216,10 @@ steeramed_core/
 
 本软件仅生成**假设生成性洞见**，不是医疗器械，不提供治疗建议。医疗决策请务必咨询合格的专业医护人员。
 
+## 关键词
+
+`biomedical world model` · `medical world model` · `steerability` · `longevity` · `aging` · `personalized medicine` · `n-of-1` · `DNA methylation` · `epigenetics` · `drug ranking` · `PPI network` · `evidence chain` · `precision medicine` · `intervention reasoning` · `rheumatoid arthritis` · `depression` · `hallmark` · `methylation age`
+
 ---
 
 ## 许可证

@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Preprint](https://img.shields.io/badge/preprint-2025-orange)](https://doi.org/10.20944/preprints202605.1578.v1)
 
-**SteeraMed: A Steerable Biomedical World Model** — Personalized intervention evidence chains from DNA methylation data.
+**SteeraMed: A Steerable Biomedical World Model** — Personalized intervention evidence chains from DNA methylation data for longevity, aging, and chronic diseases.
 
 > Select a patient case → Generate individualized drug evidence in 30 seconds.
 > [SteeraMed.com](https://steeramed.com) · [Paper](https://doi.org/10.20944/preprints202605.1578.v1)
@@ -152,6 +152,10 @@ If you use SteeraMed Core in your research, please cite both companion papers:
 ## Disclaimer
 
 This software generates hypothesis-generating insights only. It is not a medical device and does not provide treatment recommendations. Always consult qualified healthcare professionals for medical decisions.
+
+## Keywords
+
+`biomedical world model` · `medical world model` · `steerability` · `longevity` · `aging` · `personalized medicine` · `n-of-1` · `DNA methylation` · `epigenetics` · `drug ranking` · `PPI network` · `evidence chain` · `precision medicine` · `intervention reasoning` · `rheumatoid arthritis` · `depression` · `hallmark` · `methylation age`
 
 ## License
 
