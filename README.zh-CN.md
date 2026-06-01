@@ -74,23 +74,40 @@ python -m steeramed_core --case ra_303  # 指定案例
 python -m steeramed_core --list         # 列出可用案例
 ```
 
-## 图表展示
+## Patient View 展示
 
-**患者摘要卡**（衰老案例）：
+**衰老 Patient View** — 群体级筛查（GSE40279，473 老年 vs 青年）。三面板卡片展示扰动的衰老 hallmarks、Top-10 化合物排名（烟酸 #1）和 Bootstrap 置信度：
 
-![患者摘要卡](docs/aging_patient_card.png)
+![衰老 Patient View](docs/fig4_aging_patient.png)
 
-**药物排名**（类风湿关节炎案例）：
+**抑郁症 Patient View** — N-of-1 案例：52 岁男性（GSE128235）。先天免疫主导的扰动画像，肌酸排名第一：
 
-![药物排名](docs/ra_drug_ranking.png)
+![抑郁症 Patient View](docs/fig_s2_dep_patient.png)
 
-**Hallmark 扰动**（衰老案例）：
+<details>
+<summary>更多图表</summary>
+
+**科学家视图 — RA 证据链**（GSE42861，51 岁）：
+
+![RA 证据链](docs/fig6_ra_evidence.png)
+
+**Patient View — RA**（GSE42861，51 岁）：
+
+![RA Patient View](docs/fig7_ra_patient.png)
+
+**科学家视图 — 抑郁症证据链**（GSE128235，52 岁）：
+
+![抑郁症证据链](docs/fig8_dep_evidence.png)
+
+**科学家视图 — 衰老证据链**（GSE40279）：
+
+![衰老证据链](docs/fig_s1_aging_evidence.png)
+
+**Hallmark 扰动柱状图**（衰老）：
 
 ![Hallmark 扰动](docs/aging_hallmark_bar.png)
 
-**患者摘要卡**（类风湿关节炎案例）：
-
-![RA 患者摘要卡](docs/ra_patient_card.png)
+</details>
 
 ## 可用案例
 

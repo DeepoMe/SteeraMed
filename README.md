@@ -74,23 +74,40 @@ python -m steeramed_core --case ra_303  # specific case
 python -m steeramed_core --list         # list available cases
 ```
 
-## Gallery
+## Patient View Gallery
 
-**Patient Summary Card** (Aging case):
+**Aging Patient View** — Population-level screening (GSE40279, N=473 old vs young). Three-panel card showing perturbed aging hallmarks, top-10 compound ranking (Niacin #1), and bootstrap confidence:
 
-![Patient Card](docs/aging_patient_card.png)
+![Aging Patient View](docs/fig4_aging_patient.png)
 
-**Drug Ranking** (RA case):
+**Depression Patient View** — N-of-1 case: 52-year-old male (GSE128235). Innate immunity–dominant perturbation profile with creatine as top-ranked compound:
 
-![Drug Ranking](docs/ra_drug_ranking.png)
+![Depression Patient View](docs/fig_s2_dep_patient.png)
 
-**Hallmark Perturbation** (Aging case):
+<details>
+<summary>More figures</summary>
+
+**Scientist View — RA Evidence Chain** (GSE42861, 51M):
+
+![RA Evidence Chain](docs/fig6_ra_evidence.png)
+
+**Patient View — RA** (GSE42861, 51M):
+
+![RA Patient View](docs/fig7_ra_patient.png)
+
+**Scientist View — Depression Evidence Chain** (GSE128235, 52M):
+
+![Depression Evidence Chain](docs/fig8_dep_evidence.png)
+
+**Scientist View — Aging Evidence Chain** (GSE40279):
+
+![Aging Evidence Chain](docs/fig_s1_aging_evidence.png)
+
+**Hallmark Perturbation Bar** (Aging):
 
 ![Hallmark Bar](docs/aging_hallmark_bar.png)
 
-**Patient Summary Card** (RA case):
-
-![RA Patient Card](docs/ra_patient_card.png)
+</details>
 
 ## Available Cases
 
